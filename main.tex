@@ -23,6 +23,10 @@
 \usepackage{subcaption}
 \usepackage{hyperref}
 
+
+% \addbibresource{lib/lilylib/oll-lib/full.ily}
+\usepackage{lilyglyphs} 
+
 \usepackage[minimal]{leadsheets}
 \useleadsheetslibraries{musicsymbols}
 \usepackage{musicography}
@@ -32,6 +36,7 @@
 % \musEighth es la corchea
 % \musSixteenth semicorchea
 
+\usepackage{abc}
 \usepackage{musixtex}
 
 % \usepackage{wasysym}
@@ -225,7 +230,9 @@ Haciendo un análisis de la situación actual de estas dos disciplinas en la edu
 \begin{center}
     \textit{“tradicionalmente ha sido una materia que se ha considerado como deshumanizada, fría y cerrada, que no posee ninguna relación con otros ámbitos de conocimiento”}
 \end{center}
-En este contexto, este trabajo surge del interés por conocer las relaciones que existen entre estas dos disciplinas y ofrecer distintas actividades que puedan ser usadas en el aula. 
+En este contexto, este trabajo surge del interés por conocer las relaciones que existen entre estas dos disciplinas y ofrecer distintas actividades que puedan ser usadas en el aula. \\\\
+
+
 
 \section{Justificación}
 Durante el periodo de prácticas, se ha podido observar que los alumnos aprenden las mecánicas de resolución de ejercicios de matemáticas de memoria y que no entienden para qué puede servirles en el futuro.\\
@@ -283,7 +290,7 @@ Si se continúa con este proceso se obtiene:\\\\
 Y, escribiendo las notas con sus correspondientes proporcionalidades en un pentagrama se obtiene:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.6]{pentagrama.png}
+    \includegraphics[width = 0.5\textwidth]{pentagrama.png}
     \caption{Valor de cada nota musical respecto del primer Do .}
     %\label{fig:my_label}
 \end{figure}
@@ -593,7 +600,7 @@ Con esto queda demostrado que se pueden encontrar diversas transformaciones geom
 Otro aspecto en el que se relaciona la música con las matemáticas es en la forma de organizar los compases dentro de una partitura. Se va a ver a continuación que la estructura rítmica del sistema musical actual está basada en números y es que nada más comenzar a leer una partitura se tiene la clave musical y unos números:
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.4\textwidth]{compas.png}
+    \includegraphics[width = 0.3\textwidth]{compas.png}
     \caption{Comienzo de una partitura.}
 \end{figure}
 Para poder comprender esta notación es importante primero entender los conceptos de \textit{ritmo musical}, \textit{pulso} y \textit{tempo}.\\\\
@@ -637,7 +644,7 @@ A cada una de estas agrupaciones, formada por el pulso acentuado y los pulsos d�
 El \textit{pulso} es, por tanto, el ''latido'' de la pieza musical. De hecho, se mide igual que el latido cardiaco: en latidos por minuto. Esto también viene indicado al inicio de las partituras:
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.7\textwidth]{tempo.png}
+    \includegraphics[width = 0.7\textwidth]{tempo2.png}
     \caption{Indicación en partitura de los pulsos por minuto}
 \end{figure}
 En este caso, por ejemplo, son 60 latidos por minuto: en un minuto se habrán interpretado 60 pulsos, uno por segundo.\\\\
@@ -661,7 +668,7 @@ Este número, por tanto, indica la velocidad del pulso, y eso se conoce en músi
      176 - 208 & Prestissimo\\
      \hline
     \end{tabular}
-    \caption{Tempo definido con palabras.}
+    \caption{Pulsos por minuto y \textit{tempo}.}
 \end{table}
 
 Esta primera agrupación rítmica que se ha definido como \textit{pulso} se puede descomponer obteniendo, de esta forma, un \textbf{ritmo interno} que se denomina \textit{''subdivisión del pulso''}. El ritmo interno puede ser binario, cuando el pulso se subdivide en dos, como ocurre por ejemplo en ¿?¿; o ternario, cuando se subdivide en tres, como ocurre por ejemplo en los valses.\\
@@ -726,6 +733,7 @@ Para responder a esta pregunta es importante tener en cuenta el valor relativo d
     \centering
     \includegraphics[width = 0.7\textwidth]{figuras.png}
     \caption{Valor de las figuras teniendo como referencia la redonda.}
+    \label{redonda}
 \end{figure}
 Por tanto, escribir en el pentagrama la ''fracción'' \textit{cuatro por cuatro} (Figura 18 (c)), es lo mismo que escribir:
 \begin{center}
@@ -922,6 +930,7 @@ Por último, algunos ejemplos de estos ritmos son \cite{ritmos}:
     \caption{Ejemplos de ritmos euclidianos.}
 \end{table}
 \chapter{Actividades para el aula.}
+
 Con el fin de convencer a los alumnos de la relación que existe entre las matemáticas y la música, se han diseñado distintas actividades que pueden ser aplicadas durante el curso en diferentes bloques del currículo de 1º de Bachillerato, según el RD 1105/2014, de 26 de diciembre, por el que se establece el currículo básico de la Educación Secundaria Obligatoria y del Bachillerato. (Anexo B).\\\\
 De esta forma, el profesor podrá enseñar conceptos básicos de música a los alumnos e impartirá la asignatura de matemáticas de una forma distinta, innovadora y original, demostrando a los alumnos algo que no suelen tener en cuenta: las matemáticas realmente están en todas partes.\\\\
 Observaciones. Algo importante a tener en cuenta es el orden en el que se desarrollará el currículo, pues en estas actividades se detallan algunos conceptos musicales que son necesarios para actividades posteriores.\\
@@ -964,26 +973,57 @@ Aprendizaje cooperativo: darles las instrucciones a los alumnos de cómo constru
 Cada bloque del currículo está subdividido en temas o apartados que se deberán explicar en el aula. Para el primer bloque se han diseñado X actividades, cada una de las cuales tiene que ver con uno de estos temas diferentes.
 \section{Bloque 1: Números y Álgebra.}
 \begin{itemize}
-    \item \textbf{Actividad 1. Figuras musicales con números. Figuras con ''puntillo''.}\\\\
+    \item \textbf{Actividad I. Figuras musicales con números. Figuras con ''puntillo''.}\\\\
     Se ha diseñado esta actividad con el fin de que los alumnos aprendan las figuras musicales y sus respectivas duraciones y, en concreto, el significado del \textit{puntillo} que, en ocasiones, se escribe detrás de estas figuras en una partitura.\\
-    Para ello, es conveniente que los alumnos conozcan las figuras musicales por lo que, al inicio de la clase, el profesor deberá explicar esto. Se puede ayudar, por ejemplo, de la Figura () o de la Figura () del anexo. Se tendrá en cuenta durante toda la actividad que la redonda dura cuatro pulsos de compás.\\\\
+    Para ello, es conveniente que los alumnos conozcan las figuras musicales por lo que, al inicio de la clase, el profesor deberá explicar esto. Se puede ayudar, por ejemplo, de la figura \ref{redonda} o de las figuras \ref{relativo} y \ref{silencios} del Apéndice A. Se tendrá en cuenta durante toda la actividad que la redonda dura cuatro pulsos de compás.\\\\
     El \textit{puntillo} que se escribe detrás de una figura musical aumenta la duración un medio de su duración original. Es decir, si se tiene una negra con puntillo, $\musQuarterDotted$, dado que $\musQuarter$ dura un pulso, $\musQuarterDotted$ durará un pulso y medio. De forma numérica: $$\musQuarterDotted = 1 + \frac{1}{2} = \frac{3}{2}$$
     Si se tiene, por ejemplo, una semicorchea con puntillo: $\musSixteenthDotted$, su duración será: $$\musSixteenthDotted = \frac{1}{4} + \frac{1}{8} = \frac{1}{4}(1 + \frac{1}{2}) = \frac{1}{4}\cdot\frac{3}{2}$$
     Realizando más comprobaciones, se observa que el \textit{puntillo} multiplica la duración original de la figura por $\frac{3}{2}$.\\\\
-    Si se escribiera un segundo \textit{puntillo}, $\eighthNoteDottedDouble$
-    % \begin{itemize}
-    %     \item \textbf{Objetivos de la actividad.}
-    %     \begin{enumerate}
-    %         \item Que los alumnos conozcan las figuras musicales.
-    %         \item Que comprendan el concepto de puntillo.
-    %         \item Ayudarlos a realizar una demostración deductiva a partir de estos conceptos.
-    %         \item Que comprendan el método de demostración, así como los pasos a dar.
-    %     \end{enumerate}
-    % \end{itemize}
-    Se quiere, mediante un método de deducción, probar de forma matemática que la duración de una figura musical $d_{p}$, donde $d$ es la duración concreta de esa figura y $p$ el número de puntillos que le acompañan es: $$d_{p} = d[2-(\frac{1}{2})^{m}]$$
-
-    
+    Si se tiene un segundo \textit{puntillo}, $\quarterNoteDottedDouble$, este aumenta la duración un cuarto de la duración original de la figura (además de la duración extra del primer puntillo). Es decir, una negra con doble \textit{puntillo} $\quarterNoteDottedDouble$ tiene una duración de $1 + \frac{1}{2} + \frac{1}{4} = \boxed{\frac{7}{4}}$. Y, de la misma forma, una semicorchea con dos \textit{puntillos}, $\sixteenthNoteDottedDouble$: $$\sixteenthNoteDottedDouble = \frac{1}{4} + \frac{1}{8} + \frac{1}{16} = \frac{1}{4}(1+\frac{1}{2} + \frac{1}{4}) = \frac{1}{4}\cdot\frac{7}{4}$$
+    Al igual que en el caso de un solo \textit{puntillo}, si se realizan más comprobaciones, se observa que al añadir dos \textit{puntillos}, la duración de la figura original se multiplica por $\frac{7}{4}$.\\\\
+    Es muy raro encontrar partituras en las que se usen más de dos \textit{puntillos}, sin embargo, para llevar a cabo esta demostración se supondrá que se pueden poner tantos como se desee. Se quiere, por tanto, probar que la duración de una figura musical $d_{p}$, donde $d$ es la duración concreta de esa figura y $p$ el número de puntillos que le acompañan, es: $$d_{p} = d[2-(\frac{1}{2})^{p}]$$
+    Se dice que es una demostración deductiva porque, a partir de las comprobaciones realizadas anteriormente, se \textit{deduce} que la duración de una figura con $p$ \textit{puntillos} se puede escribir de la forma: $$d_{p} = d(1 + \frac{1}{2} + \frac{1}{2^{2}} + \cdots + \frac{1}{2^{p}}) = d\sum_{i=1}^{p}(\frac{1}{2})^{i}$$
+    Dado que esto es una serie geométrica, se necesita conocer este concepto así como la forma de calcular la suma. Esto último se puede mandar como deberes a los alumnos:
+    \begin{teor}
+    Dada la suma de una serie geométrica $L$ de la forma: 
+    $$L = 1 + r + r^{2} + r^{3} + \cdots + r^{m}$$
+    Se tiene que
+    $$\sum_{i=1}^{m}r^{i} = \frac{1-r^{m+1}}{1-r}$$
+    \end{teor}
+    \begin{proof}
+    \begin{eqnarray*}
+    L & = & 1 + r + r^{2} + r^{3} + \cdots + r^{m} = r(\frac{1}{r} + 1 + r + r^{2} + r^{3} + \cdots + r^{m-1}) = \\
+    & = & r(\frac{1}{r} + L - r^{m}) = 1 + L\cdot r - r^{m+1}  \Longrightarrow L - L\cdot r = 1 - r^{m+1} \\
+    & \Longrightarrow & L(1-r) = 1-r^{m+1} \Longrightarrow \boxed{L = \frac{1-r^{m+1}}{1-r}}
+    \end{eqnarray*}
+    \end{proof}
+    Por tanto, se tiene que:
+    \begin{eqnarray*}
+    d\sum_{i=1}^{p}(\frac{1}{2})^{i} & = & d[\frac{1-(\frac{1}{2})^{m+1}}{1-\frac{1}{2}}] \\
+    & = & d[2(1-(\frac{1}{2})^{m+1})] = \boxed{d(2-(\frac{1}{2})^{m}}
+    \end{eqnarray*}
+    Por tanto, queda demostrado que una figura musical de duración $d$ seguida de $m$ \textit{puntillos} tiene una duración total de $$d_{m} = d(2-(\frac{1}{2})^{m}$$
+    \textbf{Desarrollo de la actividad.}\\\\
+    Se realizará en una única clase. Se puede realizar en cualquier momento durante el bloque de números y álgebra dado que los únicos conceptos matemáticos importantes que se requieren son las series geométricas, algo que los alumnos de 1º de Bachillerato deben de conocer de cursos anteriores. Esta actividad, por tanto, les servirá para repasar conceptos y comprobar que se pueden aplicar en distintos campos. \\
+    También les servirá para entender nuevos símbolos matemáticos como puede ser el sumatorio y, sobre todo, para aprender a realizar demostraciones por deducción.\\\\
+    La metodología que se plantea en este ejemplo es expositiva, pudiendo hacer uso de distintos recursos como un proyector o pizarra interactiva con el fin de enseñar a los alumnos distintos ejemplos musicales donde puedan ver directamente las figuras y los \textit{puntillos}. \\\\
+    Como ya se ha dicho, la clase debe comenzar con la explicación de las figuras musicales y del significado del \textit{puntillo}. Una vez se tengan claras estas ideas, se realizarán las deducciones ya descritas sobre cuánto duran las distintas figuras con \textit{puntillo} y se procederá a realizar la demostración expuesta en los párrafos anteriores.\\\\
+    Como parte práctica de la actividad, se propone realizar comprobaciones con la fórmula recién demostrada. Por ejemplo: ¿Cuánto dura una fusa con dos \textit{puntillos}?\\
+    Utilizando la fórmula se tiene:
+    $$\demisemiquaverDottedDouble = \frac{1}{16}[2-(\frac{1}{2})^{2}] = \frac{1}{16}[2-\frac{1}{4}] = \frac{1}{8} - \frac{1}{64} = \frac{7}{64}$$
+    Y al calcularlo de la forma corriente, tal y como se ha realizado en un comienzo:
+    $$\demisemiquaverDottedDouble = \frac{1}{16} + \frac{1}{32} + \frac{1}{64} = \frac{4+2+1}{64} = \frac{7}{64}$$
+    \item \textbf{Actividad II. Método de Euclides. Ritmos Euclidianos.}\\\\
+    No se aportan explicaciones del tema en este apartado dado que se pueden encontrar en el capítulo anterior.\\\\
+    La finalidad de esta actividad es que los alumnos conozcan el algoritmo de Euclides y aprendan a utilizarlo. Además y al igual que en todas las actividades que se presentan, se pretende que los alumnos comprenderán la estrecha relación que tienen la música y las matemáticas.\\\\
+    \textbf{Desarrollo de la actividad.}\\\\
+    Se realizará en una única clase, una vez se hayan repasado las fracciones algebraicas y el método de cálculo del máximo común divisor, con el fin de que los alumnos puedan comprender sin problemas el algoritmo de Euclides y su utilidad.\\\\
+    Se sugiere para esta actividad utilizar las TIC como recurso didáctico reproduciendo el siguiente vídeo, donde el profesor Eduardo Sáenz de la Universidad de La Rioja explica tanto el algoritmo de Euclides como los ritmos Euclidianos: \url{https://www.youtube.com/watch?v=qxRW5pDT2o4}\\
+    Probablemente el profesor necesitará realizar ejemplos del algoritmo para que los alumnos asimilen completamente la información. Una vez comprendan el mecanismo, el profesor realizará un ejemplo en la pizarra de cómo encontrar ritmos euclidianos.\\
+    Para terminar la clase, se pueden reproducir en el aula canciones o vídeos donde aparezcan estos ritmos. 
 \end{itemize}
+\chapter{Bloque 3: Análisis.}
+El tema de análisis y, concretamente, las funciones suele ser una parte de la asignatura que 
 \section{Bloque 4: Probabilidad.}
 Con la idea de introducir a los alumnos en el mundo de la probabilidad, se propone el ''juego de los dados de Mozar'' como recurso didáctico para la enseñanza-aprendizaje de este campo.\\\\
 Mozart, mediante el proceso que se va a explicar a continuación, escribió su obra \textit{Musikalisches Würfelspiel}. Es un vals dividido en dos partes: un minueto y un trío, cada uno de ellos de 8 compases. Sin embargo, gracias al sistema que utilizó Mozart para componer esta obra, se pueden escribir una gran cantidad de valses distintos. Por lo tanto, se puede decir que Mozart no solo compuso una obra si no que, gracias a la probabilidad y el azar, creó un generador de valses.\\\\
@@ -1111,7 +1151,8 @@ Durante el proceso de esta actividad grupal, el profesor puede explicar por qué
 \section{Análisis e interpretación de los resultados.}
 Dado que no ha sido posible poner en práctica estas actividades durante un curso escolar, no se pueden ofrecer resultados cuantitativos de los alumnos. Sin embargo, se ha pedido a dos profesionales su opinión con respecto a la relación entre las matemáticas y la música y, en concreto, a enseñar dicha relación en el aula. 
 El primer profesor es musicólogo y pedagogo. ... 
-El segundo, ha sido profesor de matemáticas durante muchos años en el Centro Integrado de Música de San Lorenzo de El Escorial, por lo que ha impartido esta asignatura a alumnos que en el futuro serían músicos. 
+El segundo, ha sido profesor de matemáticas durante muchos años en el Centro Integrado de Música de San Lorenzo de El Escorial, por lo que ha impartido esta asignatura a alumnos que en el futuro serían músicos.\\\\
+
 \chapter{Conclusiones y líneas de trabajo futuras.}
 Conclusiones...
 Hay muchas formas de profundizar en este tema... 
@@ -1200,7 +1241,7 @@ A continuación, se relacionan los conceptos básicos que han sido necesarios pa
             \centering
             \includegraphics[scale = 0.5]{duracionFiguras.png}
             \caption{Valor relativo de las figuras. Imagen tomada de \cite{figura}}
-            %\label{fig:my_label}
+            \label{relativo}
     \end{figure}
     Una redonda equivale a dos blancas, una blanca a dos negras, una negra a dos corcheas, etc.\\
     Además, a cada figura musical le corresponde un silencio, con la misma duración que esa figura:
@@ -1208,7 +1249,7 @@ A continuación, se relacionan los conceptos básicos que han sido necesarios pa
             \centering
             \includegraphics[scale = 0.8]{silencios.png}
             \caption{Silencio correspondiente a cada figura musical.}
-            %\label{fig:my_label}
+            \label{silencios}
     \end{figure}
     \item Escalas musicales. Son secuencias de notas musicales. Estas se ordenan según su altura: si la escala asciende, cada sonido es más agudo que el anterior y si la escala desciende, es más grave. La función de una escala es constituir la base de una tonalidad y de una melodía.
     \item Tonalidad.
