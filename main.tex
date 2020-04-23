@@ -22,6 +22,8 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{fancyhdr}
 
 
 % \addbibresource{lib/lilylib/oll-lib/full.ily}
@@ -189,6 +191,10 @@ Una bonita historia
 \chapter{Introducción}
 \pagenumbering{arabic}
 \section{Introducción}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead[\textit{CAPÍTULO \thechapter}]{\textit{CAPÍTULO \thechapter}}
+\rhead[\textit{\rightmark}]{\textit{\rightmark}}
 % (Debe incluir: 
 % \begin{itemize}
 %     \item Contextualización del TFM
@@ -231,11 +237,12 @@ Resumen de los trabajos previos de otros autores relacionados con el tema del tr
 Bases teóricas en las que se apoya el trabajo (teorías, modelos, legislación,...). Puede ser necesaria su justificación en relación con el TFM.
 \newpage
 \chapter{Música en la Antigua Grecia}
-Ya en la antigua Grecia, la escuela pitagórica descubrió la estrecha relación existente entre las matemáticas y la música. Tal y como afirma Páez Gutiérrez (2009, p.91, \cite{paez}):\\\\
-\textit{''la relación entre la música y las matemáticas se inició por culturas antiguas como la caldea, la egipcia, la babilónica y la china, pero fueron los pitagóricos los que unieron la música y las matemáticas''}\\\\
-Fueron ellos los primeros en darse cuenta que existían sonidos agradables al oído y que, curiosamente, las longitudes de las cuerdas que los producían estaban en ciertas proporciones simples: 2/1, 3/2, 4/3, etc. De hecho, fue a raíz de estos descubrimientos por lo que los pitagóricos consideraron la música una parte de las matemáticas y así aparece en el \textit{''tratado sobre la música''}, escrito por Boecio en el s.VI d.C.\\\\
-Boecio desarrolló en este texto los principios del Pitagorismo y, en particular, aquellos dedicados a la música. Sus escrituras sobre esta materia fueron la base de toda la teoría musical elaborada durante el Medioevo en el Occidente Cristiano \cite{tomasini} (Tomasini, M.C. (2007), p.15). Consideraba la música como una de las ciencias que permitía al hombre alcanzar la sabiduría. Dichas ciencias estaban recogidas en el \textit{quadrivium} (cuádruple vía hacia la sabiduría) y eran: música, aritmética, geometría y astronomía; todas ellas disciplinas de las matemáticas, y como tales, estudiaban las relaciones entre los números, proporciones y razones.\\\\
-Para sus investigaciones, Pitágoras utilizó el monocordio, un instrumento constituido, como su nombre indica, por una sola cuerda. El experimento consistía en tensar una cuerda de longitud determinada (l) e ir estableciendo relaciones simples dividiendo la cuerda en partes. Para estos intervalos resultantes de las proporciones simples (1/2, 2/3 y 3/4) se les llamaban ''consonancias perfectas'' y consistían estrictamente en intervalos cuyas razones subyacentes estaban formadas solamente por pequeños números 1, 2, 3 y 4 -la Tetraktys-“. (Abdounur, p.63, \cite{abd})\\\\
+Ya en la antigua Grecia, la escuela pitagórica descubrió la estrecha relación existente entre las matemáticas y la música. Tal y como afirma Páez Gutiérrez (2009, \cite{paez}):\\\\
+\textit{``la relación entre la música y las matemáticas se inició por culturas antiguas como la caldea, la egipcia, la babilónica y la china, pero fueron los pitagóricos los que unieron la música y las matemáticas''}\\\\
+Fueron ellos los primeros en darse cuenta que existían sonidos agradables al oído y que, curiosamente, las longitudes de las cuerdas que los producían estaban en ciertas proporciones simples: 2/1, 3/2, 4/3, etc. De hecho, fue a raíz de estos descubrimientos por lo que los pitagóricos consideraron la música una parte de las matemáticas y así aparece en el \textit{``tratado sobre la música''}, escrito por Boecio en el s.VI d.C.\\\\
+Boecio desarrolló en este texto los principios del Pitagorismo y, en particular, aquellos dedicados a la música. Sus escrituras sobre esta materia fueron la base de toda la teoría musical elaborada durante el Medioevo en el Occidente Cristiano \cite{tomasini} (Tomasini, M.C. (2007)). Consideraba la música como una de las ciencias que permitía al hombre alcanzar la sabiduría. Dichas ciencias estaban recogidas en el \textit{quadrivium} (cuádruple vía hacia la sabiduría) y eran: música, aritmética, geometría y astronomía; todas ellas disciplinas de las matemáticas, y como tales, estudiaban las relaciones entre los números, proporciones y razones.\\\\
+Para sus investigaciones, Pitágoras utilizó el monocordio, un instrumento constituido, como su nombre indica, por una sola cuerda. El experimento consistía en tensar una cuerda de longitud determinada (l) e ir estableciendo relaciones simples dividiendo la cuerda en partes. A estos intervalos resultantes de las proporciones simples (1/2, 2/3 y 3/4) se les llamaban ``consonancias perfectas'' y consistían en intervalos en los que intervenían únicamente los números que componen \textit{la Tetraktys}.\\\\
+% cuyas razones subyacentes estaban formadas solamente por pequeños números 1, 2, 3 y 4 -la Tetraktys-“. (Abdounur, p.63, \cite{abd})\\\\
 La relación más sencilla (1/2) se obtenía dividiendo la cuerda por la mitad, de esta forma se tenían dos sonidos que se corresponden con un intervalo de octava: si la cuerda suelta determinaba la nota Do, al aplicar esta relación simple se obtenía de nuevo un Do, pero más agudo.\\
 De la misma forma, si la medida utilizada es 2/3, el intervalo que se obtiene es una quinta (Do-Sol) y, por último, si la relación aplicada es 3/4, entonces se obtiene un intervalo de cuarta (Do-Fa). Se tiene el siguiente diagrama:
 \begin{figure}[H]
@@ -276,7 +283,7 @@ Y, escribiendo las notas con sus correspondientes proporcionalidades en un penta
 Si se dibuja la escala en el plano donde las $x$ son las notas de la escala y las $y$ son las proporciones calculadas para cada nota, se tiene el siguiente gráfico:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{Images/Capítulo 3/graficoEscala.png}
+    \includegraphics[width = 0.7\textwidth]{Images/Capítulo 3/graficoEscala1.png}
     \caption{Gráfico de la escala según proporciones de quintas.}
     %\label{fig:my_label}
 \end{figure}
@@ -288,7 +295,7 @@ Existen en realidad dos intervalos más pequeños que los demás: entre el Mi y 
     \caption{Teclas del piano.}
     %\label{fig:my_label}
 \end{figure}
-Los intervalos más pequeños corresponden a las teclas blancas del piano que no tienen tecla negra entre ellas: son los dos únicos intervalos de semitono que se encuentran en la escala natural. Y aquí se tiene el primer error de cálculo en este método de afinación: la distancia de semitono no es la mitad exacta de un tono: $$\frac{256}{243} = 1,053 \not= \sqrt{\frac{9}{8}} = 1,06$$
+Los intervalos más pequeños corresponden a las teclas blancas del piano que no tienen tecla negra entre ellas: son los dos únicos intervalos de semitono que se encuentran en la escala natural. Y aquí se tiene el primer error de cálculo en este método de afinación: la distancia de semitono no es la mitad exacta de un tono: $$\frac{256}{243} = 1,053 \not= \sqrt{\frac{9}{8}} \simeq 1,06$$
 En la gráfica también se puede observar que la diferencia entre las proporciones va aumentando en cada quinta (sin tener en cuenta los semitonos ya mencionados). De hecho, si se sigue el proceso añadiendo quintas, se obtienen sonidos intermedios (las teclas negras del piano) pero estas proporciones comienzan a ser menos homogéneas.\\
 Aún así, si se continúa hasta completar 12 quintas se obtienen los 5 sonidos restantes que faltan para volver a llegar al sonido original cerrando así el conocido círculo de quintas:
 \begin{figure}[H]
@@ -306,14 +313,14 @@ Los anteriores errores descritos hicieron que se rechazara finalmente la afinaci
 \section{Sistema de afinación temperado.}
 Antes de llegar a este sistema, a lo largo de la historia se han estudiado muchos otros, como por ejemplo: 
 \begin{itemize}
-    \item \textbf{Temperamento justo} o temperamento mesotónio. Fue el sistema de afinación más utilizado a partir del siglo XVI y estaba basado en la consonancia de 3ª. 
+    \item \textbf{Temperamento justo} o temperamento mesotónico. Fue el sistema de afinación más utilizado a partir del siglo XVI y estaba basado en la consonancia de 3ª. 
     \item \textbf{Temperamentos irregulares}. Se propusieron casi al mismo tiempo que el temperamento justo. Se llamaba así porque trataba de eliminar la quinta del lobo repartiendo esa proporción entre las otras quintas. Sin embargo, esta repartición se hacía de forma \textit{irregular}.
     \item \textbf{Sistema de Holder}, que dividía la distancia entre notas en unidades interválicas más pequeñas que el semitono.
 \end{itemize}
-Finalmente se propuesto el \textbf{sistema temperado}, o temperamento igual, basado en 12 semitonos iguales y tiene en cuenta únicamente la consonancia de la 8ª, no como el pitagórico que consideraba tanto la 8º como la 5º.\\\\
+Finalmente se propuso el \textbf{sistema temperado}, o temperamento igual, basado en 12 semitonos iguales y tiene en cuenta únicamente la consonancia de la 8ª, no como el pitagórico que consideraba tanto la 8º como la 5º.\\\\
 Para comprender este sistema, lo primero que hay que comprobar es cuánto mide el intervalo de semitono:\\
 Dependerá, en primer lugar de la frecuencia desde la que se parta y, dado que un intervalo es una proporción de frecuencias, se obtendrá el valor de la frecuencia de cada nota al multiplicar la nota anterior por dicha proporción. Por ejemplo, sea f la frecuencia de Do y p la proporción entre semitonos. La frecuencia de Do# se obtendrá como $f*p$. Para obtener la frecuencia de Re: $f*p^{2}$, y así sucesivamente.\\
-Si se necesita completar una 8ª con 12 intervalos iguales y además que la proporción del semitono (p), al multiplicarlo 12 veces consecutivas por una frecuencia base (f), dé como resultado 2f: el mismo sonido una octava más arriba. Es decir: $$f*p^{12} = 2f \longrightarrow p^{12} = 2 \longrightarrow p = \sqrt[12]{2} = 1,059$$
+Por tanto, se necesita completar una 8ª con 12 intervalos iguales y además que la proporción del semitono $(p)$, al multiplicarlo 12 veces consecutivas por una frecuencia base $(f)$, dé como resultado $2f$: el mismo sonido una octava más arriba. Es decir: $$f*p^{12} = 2f \longrightarrow p^{12} = 2 \longrightarrow p = \sqrt[12]{2} = 1,059$$
 
 A continuación se muestran dos figuras: en la tabla aparece el cálculo de la proporción entre notas según el sistema pitagórico y el temperado, pudiendo comprobar así las diferencias de cálculo que existen entre ellos. En la segunda figura se puede apreciar esto gráficamente:
 \begin{table}[H]
@@ -377,7 +384,7 @@ De aquí y aplicando la fórmula descrita, se obtienen las frecuencias de cada n
 
 \chapter{Geometría en la música}
 \section{Creación de escalas simétricas}
-Uno de los conceptos más bonitos que relaciona la geometría y la música es la creación de escalas bien formadas (del inglés: Well-Formed scales) o escalas simétricas. A continuación, se dan ejemplos para después definir el concepto:\\\\
+Uno de los conceptos más bonitos que relaciona la geometría y la música es la creación de escalas bien formadas (del inglés: \textit{Well-Formed scales}) o escalas simétricas. A continuación, se dan ejemplos para después definir el concepto.\\\\
 Si se toma la secuencia de quintas de la escala diatónica (Do-Sol-Re-La-Mi-Si-Fa) y se representa alrededor de una circunferencia de forma regular se tiene: 
 \begin{figure}[H]
     \centering
@@ -412,8 +419,8 @@ Si se toman las 5 primeras quintas vuelve a cumplirse la propiedad, apareciendo 
     %\label{fig:my_label}
 \end{figure}
 Esta condición de simetría hace que se puedan distinguir fácilmente dos tipos de escalas y, como consecuencia, se establece la siguiente definición:\\
-Las escalas generadas por quintas consecutivas que preservan la simetría de la figura geométrica formada por la unión de las notas en su orden natural se denominan ''escalas bien formadas''.\\\\
-Se ha explicado el concepto en base a las 7 primeras notas del círculo de quintas, sin embargo, si se toman todas las notas con sus respectivas alteraciones, también se obtienen ''escalas bien formadas''. La más famosa es la escala cromática: 
+Las escalas generadas por quintas consecutivas que preservan la simetría de la figura geométrica formada por la unión de las notas en su orden natural se denominan \textit{escalas bien formadas}.\\\\
+Se ha explicado el concepto en base a las 7 primeras notas del círculo de quintas, sin embargo, si se toman todas las notas con sus respectivas alteraciones, también se obtienen \textit{escalas bien formadas}. La más famosa es la escala cromática: 
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.7]{Images/Capítulo 4/circuloCromatica.png}
@@ -518,7 +525,7 @@ Una vez entendidas las definiciones de estas transformaciones se dan ejemplos de
             \caption{Rotación de forma gráfica. \cite{didactica}}
         \end{figure}
         
-        \item \textit{Rotación} de la partitura. Otra forma de aplicar rotaciones a una composición musical es girar la partitura completa. Se tiene un ejemplo muy concreto de este tipo de transformación: "El dueto del espejo". Una composición atribuida a Mozart en la que dos violines interpretan la misma partitura pero, mientras uno de ellos lo hace en sentido normal: de arriba abajo, el otro recorre la partitura en sentido contrario. Es decir, un intérprete comienza por el primer compás y el otro por el último, se cruzan a la mitad y cada uno termina donde comenzó el otro. A continuación, se muestran los primeros compases leídos tanto desde arriba como desde abajo. Se comprueba que ambos instrumentos tocan las mismas notas, pero en distinta octava. Se puede ver la partitura completa en el Apéndice C.
+        \item \textit{Rotación} de la partitura. Otra forma de aplicar rotaciones a una composición musical es girar la partitura completa. Se tiene un ejemplo muy concreto de este tipo de transformación: ``El dueto del espejo''. Esta es una composición atribuida a Mozart en la que dos violines interpretan la misma partitura pero, mientras uno de ellos lo hace en sentido normal: de arriba abajo, el otro recorre la partitura en sentido contrario. Es decir, un intérprete comienza por el primer compás y el otro por el último, se cruzan a la mitad y cada uno termina donde comenzó el otro. A continuación, se muestran los primeros compases leídos tanto desde arriba como desde abajo. Se comprueba que ambos instrumentos tocan las mismas notas, pero en distinta octava. Se puede ver la partitura completa en el Apéndice B.
         \begin{figure}[H]
             \centering
             \includegraphics[width = 0.8\textwidth]{Images/Capítulo 4/dueto1.png}
@@ -597,7 +604,7 @@ A la hora de generar pulsos, existen distintos patrones de repetición pudiendo,
     \hline
     \end{tabular}
 \end{table}
-O la primera de cada tres, como ocurre por ejemplo en la canción...:
+O la primera de cada tres:
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -615,7 +622,7 @@ Y por último, la primera de cada cuatro, como por ejemplo en la Primavera de Vi
     \hline
     \end{tabular}
 \end{table}
-A cada una de estas agrupaciones, formada por el pulso acentuado y los pulsos débiles que vienen después, se le denomina \textbf{compás}:
+A cada una de estas agrupaciones, formada por el pulso acentuado y los pulsos débiles que vienen después, se le denomina \textit{compás}:
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.8\textwidth]{Images/Capítulo 5/compases.png}
@@ -628,7 +635,7 @@ El \textit{pulso} es, por tanto, el ''latido'' de la pieza musical. De hecho, se
     \caption{Indicación en partitura de los pulsos por minuto}
 \end{figure}
 En este caso, por ejemplo, son 60 latidos por minuto: en un minuto se habrán interpretado 60 pulsos, uno por segundo.\\\\
-Este número, por tanto, indica la velocidad del pulso, y eso se conoce en música como \textit{tempo}.\\ En muchos casos, el \textit{tempo} no viene definido con números, si no con palabras, algunas de ellas muy conocidas, como ''Allegro'', ''Andante'', 'Vivace'', etc.
+Este número, por tanto, indica la velocidad del pulso, y eso se conoce en música como \textit{tempo}.\\ En muchos casos, el \textit{tempo} no viene definido con números, sino con palabras, algunas de ellas muy conocidas, como ''Allegro'', ''Andante'', 'Vivace'', etc.
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c}
@@ -651,7 +658,7 @@ Este número, por tanto, indica la velocidad del pulso, y eso se conoce en músi
     \caption{Pulsos por minuto y \textit{tempo}.}
 \end{table}
 
-Esta primera agrupación rítmica que se ha definido como \textit{pulso} se puede descomponer obteniendo, de esta forma, un \textbf{ritmo interno} que se denomina \textit{''subdivisión del pulso''}. El ritmo interno puede ser binario, cuando el pulso se subdivide en dos, como ocurre por ejemplo en ¿?¿; o ternario, cuando se subdivide en tres, como ocurre por ejemplo en los valses.\\
+Esta primera agrupación rítmica que se ha definido como \textit{pulso} se puede descomponer obteniendo, de esta forma, un ritmo interno que se denomina \textit{''subdivisión del pulso''}. El ritmo interno puede ser binario, cuando el pulso se subdivide en dos, o ternario cuando se subdivide en tres, como ocurre por ejemplo en los valses.\\
 De esta forma, se obtienen diversos ritmos pudiendo ser:
 \begin{itemize}
     \item Ritmos donde se acentúa la primera de cada dos y cada pulso se subdivide en dos:
@@ -706,16 +713,17 @@ Volviendo a la forma en la que se ha definido el compás, estas combinaciones an
             \includegraphics[width = 0.1\textwidth]{Images/Capítulo 5/cuatrocuatro.png}}
             \hspace{1.7cm}
         \caption{Compases binarios.}
+        \label{binarios}
 \end{figure}
-Se observa, entonces, que el numerador en esta ''fracción'' indica el número de pulsos que tiene cada compás pero, ¿qué significa el denominador?\\ 
-Para responder a esta pregunta es importante tener en cuenta el valor relativo de las figuras descrito en el Anexo A: una redonda equivale a dos negras, que a su vez equivalen a cuatro corcheas, etc. Actualmente la nota más larga que se usa es la redonda, por lo que numéricamente la redonda se representa con un 1:
+Se observa, entonces, que el numerador en esta ``fracción'' indica el número de pulsos que tiene cada compás pero, ¿qué significa el denominador?\\ 
+Para responder a esta pregunta es importante tener en cuenta el valor relativo de las figuras descrito en el Apéndice A: una redonda equivale a dos negras, que a su vez equivalen a cuatro corcheas, etc. Actualmente la nota más larga que se usa es la redonda, por lo que numéricamente la redonda se representa con un 1:
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.7\textwidth]{Images/Capítulo 5/figuras.png}
     \caption{Valor de las figuras teniendo como referencia la redonda.}
     \label{redonda}
 \end{figure}
-Por tanto, escribir en el pentagrama la ''fracción'' \textit{cuatro por cuatro} (Figura 18 (c)), es lo mismo que escribir:
+Por tanto, escribir en el pentagrama la ''fracción'' \textit{cuatro por cuatro} (Figura \ref{binarios} (c)), es lo mismo que escribir:
 \begin{center}
     \meter{4}{4} = $4 * \frac{1}{4}$ = $4 * $\musQuarter \hspace{0.3cm} $\longrightarrow$ \hspace{0.3cm} cuatro negras por compás
 \end{center}
@@ -724,7 +732,7 @@ Lo mismo ocurre con el \meter{3}{4} (\textit{tres por cuatro}) y con el \meter{2
     \meter{3}{4} = $3 * \frac{1}{4}$ = $3 * $\musQuarter \hspace{0.3cm} $\longrightarrow$ \hspace{0.3cm} tres negras por compás\\
     \meter{2}{4} = $2 * \frac{1}{4}$ = $2 * $\musQuarter \hspace{0.3cm} $\longrightarrow$ \hspace{0.3cm} dos negras por compás
 \end{center}
-En consecuencia, se podría decir que el denominador de esta ''fracción'' no es un valor numérico, si no que es la representación numérica de la figura musical. Sin embargo, la duración de cada figura musical sí que tiene un sentido matemático, de hecho sigue una progresión geométrica de razón $\frac{1}{2}$.\\\\
+En consecuencia, se podría decir que el denominador de esta ''fracción'' no es un valor numérico, sino que es la representación numérica de la figura musical. Sin embargo, la duración de cada figura musical sí que tiene un sentido matemático, de hecho sigue una progresión geométrica de razón $\frac{1}{2}$.\\\\
 Por otro lado, si la subdivisión es ternaria, la notación es algo más complicada: 
 \begin{itemize}
     \item Si el compás tiene dos pulsos, se denomina \textit{seis por ocho}
@@ -845,10 +853,10 @@ Con lo cual, repartiendo de nuevo los espacios vacíos entre las cuatro parejas,
 \end{table}
 El algoritmo de Euclides seguiría un paso más, sin embargo, de esta forma ya se ha distribuido de manera homogénea los cuatro pulsos entre las once unidades de tiempo.\\\\
 
-Demaine y sus coautores probaron formalmente que este algoritmo proporciona, salvo rotaciones, la única manera de distribuir k objetos entre n del modo más regular posible.\cite{demaine}(Demaine, p. 429).\\\\
+Demaine y sus coautores probaron formalmente que este algoritmo proporciona, salvo rotaciones, la única manera de distribuir k objetos entre n del modo más regular posible.(Demaine, \cite{demaine}).\\\\
 Este algoritmo tiene las siguientes propiedades:
 \begin{enumerate}
-    \item Los ritmos euclídeos no cambian bajo rotaciones. Esto es debido a que lo que importa en este algoritmo es la distancia o intervalo que existe entre cada pulso acentuado, y esto no varía cuando se rota el ritmo. En el ejemplo anterior, las siguientes combinaciones serían correctas y, de hecho, equivalentes a la obtenida:
+    \item Los ritmos euclídeos no cambian al aplicar una rotación. Esto es debido a que lo que importa en este algoritmo es la distancia o intervalo que existe entre cada pulso acentuado, y esto no varía cuando se rota el ritmo. En el ejemplo anterior, las siguientes combinaciones serían correctas y, de hecho, equivalentes a la obtenida:
     \begin{table}[H]
         \centering
         \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
@@ -894,7 +902,7 @@ Este algoritmo tiene las siguientes propiedades:
     \end{table}
     Se puede observar que el patrón principal es (\hspace{0.1cm}. \hspace{0.1cm} $\bullet$ \hspace{0.1cm} $\bullet$) y, curiosamente, se repite 4 veces, que es el máximo común divisor de $12$ y $8$. Como consecuencia se tiene que, en un ritmo euclidiano $E(k,n)$ donde $k$ y $n$ no son primos entre sí y $mcd(k,n) = d$, el patrón principal de E(k,n) se repite exactamente $d$ veces.
 \end{enumerate}
-Por último, algunos ejemplos de estos ritmos son \cite{ritmos} (Gómez, P.):
+Por último, algunos ejemplos de estos ritmos son (Gómez, P. \cite{ritmos}):
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|}
@@ -913,7 +921,7 @@ Por último, algunos ejemplos de estos ritmos son \cite{ritmos} (Gómez, P.):
     \caption{Ejemplos de ritmos euclidianos.}
 \end{table}
 \chapter{Actividades para el aula.}
-Con el fin de convencer a los alumnos de la relación que existe entre las matemáticas y la música, se han diseñado distintas actividades que pueden ser aplicadas durante el curso en diferentes bloques del currículo de 1º de Bachillerato, según el RD 1105/2014, de 26 de diciembre, por el que se establece el currículo básico de la Educación Secundaria Obligatoria y del Bachillerato. (Apéndice B).\\\\
+Con el fin de convencer a los alumnos de la relación que existe entre las matemáticas y la música, se han diseñado distintas actividades que pueden ser aplicadas durante el curso en diferentes bloques del currículo de 1º de Bachillerato, según el RD 1105/2014, de 26 de diciembre, por el que se establece el currículo básico de la Educación Secundaria Obligatoria y del Bachillerato. (BOE, \cite{boe}).\\\\
 De esta forma, el profesor podrá enseñar conceptos básicos de música a los alumnos e impartirá la asignatura de matemáticas de una forma distinta, innovadora y original, demostrando a los alumnos algo que no suelen tener en cuenta: las matemáticas realmente están en todas partes.\\\\
 El objetivo principal de este proyecto interdisciplinar es que los alumnos terminen el curso habiendo aprendido conceptos básicos musicales y habiendo comprendido la importancia que tienen las matemáticas en un campo tan cercano a ellos. Además, algunas de las actividades que se desarrollan a continuación utilizan metodologías modernas distintas de la clase tradicional. Se busca de esta manera, fomentar el trabajo en grupo y el aprendizaje cooperativo, crear ambientes donde los alumnos estén cómodos y aprendan de una forma innovadora, promover la utilización de las TIC, entre otras.\\\\
 Algo importante a tener en cuenta es el orden en el que se desarrollará el currículo, pues en estas actividades se detallan algunos conceptos musicales que son necesarios para actividades posteriores.\\
@@ -925,12 +933,33 @@ El currículo de 1º de Bachillerato está dividido en 5 bloques:
     \item Geometría.
     \item Estadística y Probabilidad.
 \end{itemize}
-Dado que el primer bloque se basa en la planificación del proceso de resolución de problemas, estrategias y procedimientos matemáticos, etc, se asume que se explica durante todo el curso, por lo que no se ha desarrollado ninguna actividad específica para este bloque, pudiendo desarrollar las competencias que se exigen en él durante las actividades descritas a continuación.
+Dado que el primer bloque se basa en la planificación del proceso de resolución de problemas, estrategias y procedimientos matemáticos, etc, se asume que se explica durante todo el curso, por lo que no se ha desarrollado ninguna actividad específica para este bloque, pudiendo desarrollar las competencias que se exigen en él durante las actividades descritas a continuación. En la siguiente tabla se muestra un esquema de dichas actividades:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+      Bloque & Nombre de la actividad \\
+      \hline \hline
+      \multirow{2}{*}{Números y Álgebra} & Figuras musicales con números. Figuras con ``puntillo''. \\ 
+      \cline{2-2}
+      & Método de Euclides. Ritmos Euclidianos. \\
+      \hline
+      \multirow{2}{*}{Geometría} & Traslaciones, rotaciones y simetrías musicales. \\
+      \cline{2-2}
+      & Música fractal. \\
+      \hline
+      Análisis & La función melodía.\\
+      \hline
+      Probabilidad y Estadística & El juego de los dados de Mozart.\\
+      \hline
+    \end{tabular}
+    \caption{Esquema de actividades}
+\end{table}
 
 \section{Bloque 2: Números y Álgebra.}
 \begin{itemize}
-    \item \textbf{Actividad I. Figuras musicales con números. Figuras con ''puntillo''.}\\\\
-    Se ha diseñado esta actividad con el fin de que los alumnos aprendan las figuras musicales y sus respectivas duraciones y, en concreto, el significado del \textit{puntillo} que en algunas ocasiones se escribe detrás de estas figuras en una partitura.\\
+    \item \textbf{Actividad I. Figuras musicales con números. Figuras con ``puntillo''.}\\\\
+    Se ha diseñado esta actividad con el fin de que los alumnos recuerden las figuras musicales y sus respectivas duraciones y, en concreto, el significado del \textit{puntillo} que en algunas ocasiones se escribe detrás de estas figuras en una partitura.\\
    Obviamente, es primordial que los alumnos conozcan las figuras musicales y, en consecuencia, el profesor deberá iniciar la clase dando una breve explicación de este concepto. Para ello, se puede ayudar de la figura \ref{redonda} o de las figuras \ref{relativo} y \ref{silencios} del Apéndice A. Se tendrá en cuenta, durante toda la actividad, que la redonda dura cuatro pulsos de compás.\\\\
     El \textit{puntillo} que se escribe detrás de una figura musical aumenta la duración un medio de su duración original. Es decir, si se tiene una negra con puntillo, $\musQuarterDotted$, dado que $\musQuarter$ dura un pulso, $\musQuarterDotted$ durará un pulso y medio. De forma numérica: $$\musQuarterDotted = 1 + \frac{1}{2} = \frac{3}{2}$$
     Si se tiene, por ejemplo, una semicorchea con puntillo: $\musSixteenthDotted$, su duración será: $$\musSixteenthDotted = \frac{1}{4} + \frac{1}{8} = \frac{1}{4}(1 + \frac{1}{2}) = \frac{1}{4}\cdot\frac{3}{2}$$
@@ -938,13 +967,13 @@ Dado que el primer bloque se basa en la planificación del proceso de resolució
     Si se tiene un segundo \textit{puntillo}, $\quarterNoteDottedDouble$, este aumenta la duración un cuarto de la duración original de la figura (además de la duración extra del primer puntillo). Es decir, una negra con doble \textit{puntillo} $\quarterNoteDottedDouble$ tiene una duración de $1 + \frac{1}{2} + \frac{1}{4} = \boxed{\frac{7}{4}}$. Y, de la misma forma, una semicorchea con dos \textit{puntillos}, $\sixteenthNoteDottedDouble$: $$\sixteenthNoteDottedDouble = \frac{1}{4} + \frac{1}{8} + \frac{1}{16} = \frac{1}{4}(1+\frac{1}{2} + \frac{1}{4}) = \frac{1}{4}\cdot\frac{7}{4}$$
     Al igual que en el caso de un solo \textit{puntillo}, si se realizan más comprobaciones, se observa que al añadir dos \textit{puntillos}, la duración de la figura original se multiplica por $\frac{7}{4}$.\\\\
     Es muy raro encontrar partituras en las que se usen más de dos \textit{puntillos}, sin embargo, para llevar a cabo esta demostración se supondrá que se pueden poner tantos como se desee. Se quiere, por tanto, probar que la duración de una figura musical $d_{p}$, donde $d$ es la duración concreta de esa figura y $p$ el número de puntillos que le acompañan, es: $$d_{p} = d[2-(\frac{1}{2})^{p}]$$
-    Se dice que es una demostración deductiva porque, a partir de las comprobaciones realizadas anteriormente, se \textit{deduce} que la duración de una figura con $p$ \textit{puntillos} se puede escribir de la forma: $$d_{p} = d(1 + \frac{1}{2} + \frac{1}{2^{2}} + \cdots + \frac{1}{2^{p}}) = d\sum_{i=1}^{p}(\frac{1}{2})^{i}$$
+    Se dice que es una demostración deductiva porque, a partir de las comprobaciones realizadas anteriormente, se \textit{deduce} que la duración de una figura con $p$ \textit{puntillos} se puede escribir de la forma: $$d_{p} = d(1 + \frac{1}{2} + \frac{1}{2^{2}} + \cdots + \frac{1}{2^{p}}) = d\sum_{i=0}^{p}(\frac{1}{2})^{i}$$
     Dado que esto es una serie geométrica, se necesita conocer este concepto así como la forma de calcular la suma. Esto último se puede mandar como deberes a los alumnos:
     \begin{teor}
     Dada la suma de una serie geométrica $L$ de la forma: 
     $$L = 1 + r + r^{2} + r^{3} + \cdots + r^{m}$$
     Se tiene que
-    $$\sum_{i=1}^{m}r^{i} = \frac{1-r^{m+1}}{1-r}$$
+    $$\sum_{i=0}^{m}r^{i} = \frac{1-r^{m+1}}{1-r}$$
     \end{teor}
     \begin{proof}
     \begin{eqnarray*}
@@ -955,12 +984,12 @@ Dado que el primer bloque se basa en la planificación del proceso de resolució
     \end{proof}
     Por tanto, se tiene que:
     \begin{eqnarray*}
-    d\sum_{i=1}^{p}(\frac{1}{2})^{i} & = & d[\frac{1-(\frac{1}{2})^{m+1}}{1-\frac{1}{2}}] \\
-    & = & d[2(1-(\frac{1}{2})^{m+1})] = \boxed{d(2-(\frac{1}{2})^{m}}
+    d\sum_{i=0}^{p}(\frac{1}{2})^{i} & = & d\left[\frac{1-(\frac{1}{2})^{m+1}}{1-\frac{1}{2}}\right] \\
+    & = & d[2(1-(\frac{1}{2})^{m+1})] = \boxed{d(2-(\frac{1}{2})^{m})}
     \end{eqnarray*}
-    Por tanto, queda demostrado que una figura musical de duración $d$ seguida de $m$ \textit{puntillos} tiene una duración total de $$d_{m} = d(2-(\frac{1}{2})^{m}$$
+    Por tanto, queda demostrado que una figura musical de duración $d$ seguida de $m$ \textit{puntillos} tiene una duración total de $$d_{m} = d(2-(\frac{1}{2})^{m})$$
     \textbf{Desarrollo de la actividad.}\\\\
-    Esta actividad tendrá una duración de una sesión lectiva. Se puede realizar en cualquier momento del bloque de números y álgebra dado que los únicos conceptos matemáticos importantes que se requieren son los correspondientes a las series geométricas, algo que los alumnos de 1º de Bachillerato Bachillerato conocen de cursos anteriores (currículo oficial de 3º ESO). Esta actividad, por tanto, les servirá para repasar conceptos y comprobar que se pueden aplicar en distintos campos. \\
+    Esta actividad tendrá una duración de una sesión lectiva. Se puede realizar en cualquier momento del bloque de números y álgebra dado que los únicos conceptos matemáticos importantes que se requieren son los correspondientes a las series geométricas, algo que los alumnos de 1º de Bachillerato conocen de cursos anteriores (currículo oficial de 3º ESO). Esta actividad, por tanto, les servirá para repasar conceptos y comprobar que se pueden aplicar en distintos campos. \\
     También les servirá para entender nuevos símbolos matemáticos como puede ser el sumatorio y, sobre todo, para aprender a realizar demostraciones por deducción.\\\\
     La metodología que se plantea en este ejemplo es expositiva, pudiendo además hacer uso de distintos recursos, como un proyector o una pizarra interactiva, con el fin de enseñar a los alumnos distintos ejemplos musicales donde se puedan ver directamente las figuras y los \textit{puntillos}. \\\\
     Como ya se ha dicho, la clase debe comenzar con la explicación de las figuras musicales y del significado del \textit{puntillo}. Una vez se tengan claras estas ideas, se realizarán las deducciones ya descritas sobre cuánto duran las distintas figuras con \textit{puntillo} y se procederá a realizar la demostración expuesta en los párrafos anteriores.\\\\
@@ -970,7 +999,7 @@ Dado que el primer bloque se basa en la planificación del proceso de resolució
     Y al calcularlo de la forma corriente, tal y como se ha realizado en un comienzo:
     $$\demisemiquaverDottedDouble = \frac{1}{16} + \frac{1}{32} + \frac{1}{64} = \frac{4+2+1}{64} = \frac{7}{64}$$
     \item \textbf{Actividad II. Método de Euclides. Ritmos Euclidianos.}\\\\
-    No se aportan explicaciones del tema en este apartado dado que se pueden encontrar en el capítulo anterior.\\\\
+    No se aportan explicaciones del tema en este apartado dado que se pueden encontrar en el capítulo 5.\\\\
     La finalidad de esta actividad es que los alumnos conozcan el algoritmo de Euclides y aprendan a utilizarlo. Además, y al igual que en todas las actividades que se presentan, se pretende que los alumnos comprenderán la estrecha relación que tienen la música y las matemáticas.\\\\
     \textbf{Desarrollo de la actividad.}\\\\
     Se realizará en una única sesión lectiva, una vez se hayan repasado las fracciones algebraicas y el método de cálculo del máximo común divisor con el fin de que los alumnos puedan comprender sin problemas el algoritmo de Euclides y su utilidad.\\\\
@@ -988,8 +1017,8 @@ Dado que el primer bloque se basa en la planificación del proceso de resolució
     El profesor, con ayuda de un ordenador y un proyector, propondrá distintas composiciones en las que se puedan apreciar las transformaciones. En un primer momento, los alumnos escucharán el fragmento elegido y deberán pensar qué tipo de isometría aparece en esa composición. Se plantea, para este momento, crear un ambiente donde los alumnos puedan debatir entre ellos y aportar diferentes ideas. Después, el profesor proyectará la partitura para mostrar la isometría.\\
     En el sección 4.2 "Geometría y composición'' se han planteado diversos ejemplos que pueden ser usados en el aula.
     \item \textbf{Actividad II. Música fractal.}\\\\
-    Se propone una segunda actividad en el bloque de ''Geometría'': la música fractal. El objetivo es el de que los alumnos comprendan el término fractal y conozcan diversos aspectos donde son muy útiles, concretamente en la composición musical.\\\\
-    Un fractal es un elemento semi-geométrico cuya estructura básica (su apariencia y la manera en la que se distribuye) se repite a diferentes escalas.\\
+    Se propone una segunda actividad en el bloque de Geometría: la música fractal. El objetivo es el de que los alumnos comprendan el término fractal y conozcan diversos aspectos donde son muy útiles, concretamente en la composición musical.\\\\
+    Un fractal es un elemento geométrico cuya estructura básica (su apariencia y la manera en la que se distribuye) se repite a diferentes escalas.\\
     Este concepto fue definido por primera vez por el matemático Mandelbrot en 1975. Algunos ejemplos de fractales son:
     \begin{figure}[H]
         \centering
@@ -1010,20 +1039,33 @@ Dado que el primer bloque se basa en la planificación del proceso de resolució
     \end{figure}
     Las principales características de estos objetos son:
     \begin{enumerate}
-        \item Autosimilaridad. La propia definición de fractal lo indica: su estructura básica no varía si se observa el objeto en diferentes escalas.
+        \item Autosimilaridad. La propia definición de fractal lo indica: su estructura básica no varía si se observa el objeto a diferentes escalas.
         \item La \textit{dimensión fractal}, $d_{f}$, es estrictamente mayor a la \textit{dimensión topológica}, $d_{t}$.
         $$d_{f} > d_{t}$$
         La dimensión, como concepto matemático, se refiere a las propiedades topológicas de una forma u objeto según su capacidad de desarrollo espacial. Por ejemplo, un cuadrado se representa en el espacio en forma de plano, mientras que un cubo es un volumen. Esto, en términos numéricos, se expresa en la \textit{dimensión}, siendo todos los planos de dimensión 2, los volúmenes de dimensión 3 y las rectas de dimensión 1.\\
-        Por otra parte, la \textit{dimensión fractal} se ha definido durante los últimos años de muchas formas distintas y no todas son equivalentes. Esto se explica de forma más extensa en \cite{fractales} ({Pérez J.A.} (2000), \url{www.dlsi.ua.es}.\\
+        Por otra parte, la \textit{dimensión fractal} se ha definido durante los últimos años de muchas formas distintas y no todas son equivalentes. Esto se explica de forma más extensa en \cite{fractales} ({Pérez J.A.} (2000), \url{japerez@dlsi.ua.es}.\\
         Básicamente, esta dimensión determina cuánto parece llenar un fractal el espacio conforme se amplía el objeto a escalas más pequeñas.
-        \item Los fractales no son diferenciables en ningún punto. Es decir, no gozan de las propiedades de “suavidad” de las funciones derivables.
+        \item Los fractales no son diferenciables en ningún punto. Es decir, no gozan de las propiedades de “suavidad” de las funciones derivables.\\
+        En la introducción de este capítulo se ha mencionado la necesidad de tener en cuenta el orden de explicación de los bloques, ya que hay conceptos que los alumnos deben tener para comprender distintas actividades. En este caso, los alumnos no entenderán el concepto de \textit{diferenciable} si no se ha explicado antes el bloque de análisis.\\
+        Si este fuera el caso y los alumnos estuvieran familiarizados con las funciones, el profesor puede completar este apartado mostrando a los alumnos una función continua pero no diferenciable en ningún punto. La función de Weierstrass cumple estas condiciones. Weierstrass fue el primer matemático en dar un ejemplo de una función continua en un intervalo, pero no diferenciable en ninguno de sus puntos:
+        $$\sigma(x) = \sum_{n=0}^{\infty}a^{n}\cos{b^{n}\pix}$$
+        Weierstrass demostró que si $0<a<1$ y $b$ es un entero positivo e impar y se cumple la condición:
+        $$ab>1+\frac{3}{2}\pi$$
+        entonces la función $\sigma(x)$ es continua en todo ${\rm I\!R}$ y no es derivable en ningún punto.\\
+        Tal y como se aprecia en la siguiente imagen de \cite{weier}, esta función se comporta como un fractal aunque no cumple de forma rigurosa la propiedad de autosimilaridad:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width = 0.6\textwidth]{Images/Capítulo 6/weierstrass.png}
+            \caption{Función de Weierstrass. Imagen de \cite{weier}.}
+            \label{fig:my_label}
+        \end{figure}
     \end{enumerate}
     Estos objetos se utilizan para estudiar una infinidad de fenómenos, como el comportamiento de los terremotos, los movimientos de la bolsa, compresión de imágenes de ordenador, neurociencia, etc.\\
     Una aplicación concreta en la que se utilizan es, como se ha dicho, en la música. \\
-    Se define música fractal como \textit{aquella que ha sido generada a partir de la proyección en un espacio musical del comportamiento de un determinado fractal} \cite{fractales} ({Pérez J.A.} (2000), \url{www.dlsi.ua.es}. Por lo tanto, en un primer momento se puede pensar que la música fractal es algo moderno (y el concepto en sí lo es). Sin embargo, diferentes estudios han encontrado rasgos de autosemejanza en algunas piezas clásicas, como por ejemplo \textit{La coral} de "Kunst der Fuge'' de Johann Sebastian Bach, en la que los mismos motivos son repetidos por distintos instrumentos y con distintas variaciones. En concreto, varias voces repiten al doble de velocidad la melodía de la voz principal.\\
+    Se define música fractal como \textit{aquella que ha sido generada a partir de la proyección en un espacio musical del comportamiento de un determinado fractal} \cite{fractales} ({Pérez J.A.} (2000), \url{japerez@dlsi.ua.es}). Por lo tanto, en un primer momento se puede pensar que la música fractal es algo moderno (y el concepto en sí lo es). Sin embargo, diferentes estudios han encontrado rasgos de autosemejanza en algunas piezas clásicas, como por ejemplo \textit{La coral} de "Kunst der Fuge'' de Johann Sebastian Bach, en la que las mismas melodías son repetidas por distintos instrumentos y con distintas variaciones. En concreto, varias voces repiten al doble de velocidad la melodía de la voz principal.\\
     En \cite{fractales} se pueden encontrar muchos más ejemplos de investigaciones que analizan la manifestación de estructuras fractales en composiciones clásicas.\\\\
     Ahora bien, la música fractal, tal y como se ha definido, se basa en proyectar el comportamiento de un fractal sobre un espacio musical.\\
-    Cada vez hay más compositores que utilizan los fractales para crear sus obras. En casi todos los casos, se ayudan de programas informáticos que generan secuencias de sonidos basados en fractales. Por ejemplo, Phil Thompson, basó todas sus composiciones en el conjunto de Mandelbrot, utilizando un programa informático llamado "Gingerbread''.\\\\
+    Cada vez hay más compositores que utilizan los fractales para crear sus obras. En casi todos los casos, se ayudan de programas informáticos que generan secuencias de sonidos basados en fractales. Por ejemplo, Phil Thompson, basó todas sus composiciones en el conjunto de Mandelbrot, utilizando un programa informático llamado ``Gingerbread'' (V. Hugo, 2014, \cite{gingerbread}.\\\\
     \textbf{Desarrollo de la actividad.}\\\\
     Se realizará en una sola clase, utilizando una metodología expositiva. El profesor desarrollará, en primer lugar, el concepto de fractal y proyectará en la pizarra distintos ejemplos. Además, puede explicar cómo construir los fractales más famosos:
     \begin{figure}[H]
@@ -1037,7 +1079,8 @@ Dado que el primer bloque se basa en la planificación del proceso de resolució
 \end{itemize}
 Para que los alumnos comprendan la gran utilidad que tienen los fractales, es conveniente que el profesor aporte algunos ejemplos de cómo se usan en ciencia, economía, etc. Después, se pasará a explicar el concepto de \textit{música fractal}. \\
 Una cuestión interesante que probablemente los alumnos se planteen es ¿cómo se puede transcribir una imagen (un fractal en este caso) a notación musical?. Existen muchos programas informáticos que realizan esta acción como, por ejemplo, el ya citado \textit{Gingerbread}, o \textit{Venharis}, ambos creaciones del compositor mencionado Phil Thompson. Otros ejemplos pueden ser: \textit{Fractal Harmonies, MusicNum 2.08, Make Prime Music}, etc.\\
-El profesor, como parte práctica de la actividad, puede mostrar alguno de estos programas en el aula. \textit{Gingerbread} es de acceso gratuito y es sencillo entender su funcionamiento. V. Hugo (2014, p.8 ) lo explica detalladamente en \cite{gingerbread}: \textit{El programa sonoriza segmentos del fractal o cuasi-fractal llamado Conjunto de Mandelbrot, pero también de imágenes en formato jpg. Gingerbread maneja series de instrucciones matemáticas, instrucciones llamadas algoritmos (por eso se le llama también música algorítmica) con las que dar tratamiento a los parámetros espaciales de la imagen para adaptarlos a los parámetros de las tonalidades sonoras, logrando una traducción de lo espacial a lo auditivo.}
+El profesor, como parte práctica de la actividad, puede mostrar alguno de estos programas en el aula. \textit{Gingerbread} es de acceso gratuito y es sencillo entender su funcionamiento. Victor Hugo (2014, p.8) lo explica detalladamente en \cite{gingerbread}. De forma resumida, el programa se basa en sonorizar segmentos del Conjunto de Mandelbrot y, mediante instrucciones algorítmicas, transforma los parámetros espaciales de la imagen a parámetros de las tonalidades sonoras.
+% \textit{El programa sonoriza segmentos del fractal o cuasi-fractal llamado Conjunto de Mandelbrot, pero también de imágenes en formato jpg. Gingerbread maneja series de instrucciones matemáticas, instrucciones llamadas algoritmos (por eso se le llama también música algorítmica) con las que dar tratamiento a los parámetros espaciales de la imagen para adaptarlos a los parámetros de las tonalidades sonoras, logrando una traducción de lo espacial a lo auditivo.}
 \section{Bloque 4: Análisis.}
 El tema de análisis y, concretamente, las funciones suele ser una parte de la asignatura que a los alumnos les resulta especialmente complicada. Esta actividad se ha pensado para despertar la creatividad en los estudiantes y poner de manifiesto las aplicaciones de esta parte de las matemáticas a la música.\\\\
 Se quiere hacer ver a los alumnos que las melodías se pueden considerar como funciones y, como tal, tienen dominio, tienen recorrido, se puede estudiar su continuidad, derivabilidad, etc. \\
@@ -1065,14 +1108,27 @@ Por lo tanto, la función que se obtiene es:
 El dominio de la función es el intervalo donde está representada y, como la variable independiente $x$ está medida en pulsos, el dominio es: $[0, 12]$ (12 es el número de pulsos que están representados).\\
 El recorrido es algo más complejo de explicar. En la Figura \ref{funcion} parece claro que el recorrido es $[392, 784]$, herzios entre los que la función oscila. Sin embargo, esto no es del todo cierto ya que la melodía, en realidad, no pasa por todas las notas comprendidas en ese intervalo. Por ejemplo, el pico que aparece dibujado va de Sol medio a Sol agudo, pero no se interpretan todas las notas que hay entre estos dos Soles. Esto es algo que se deberá explicar a los alumnos para que lo tengan en cuenta; sin embargo se obviará esta contrariedad para que sea más sencillo representar las funciones.\\\\
 La función es continua, no tiene saltos. Musicalmente, la función dejará de ser continua cuando haya silencios en la partitura.\\
-En cuanto a la derivabilidad, una melodía será derivable cuando sea suave. Se ve claramente en el dibujo que la función tiene un pico y, por tanto, no es derivable en todo su dominio.\\\\
+En cuanto a la derivabilidad, una melodía será derivable cuando sea suave. Esta cualidad es algo subjetiva y en la manera en la que se han unido las notas en la figura anterior cabe pensar que siempre van a ser líneas quebradas, por lo que tendrán picos y por tanto las funciones no serán derivables. Sin embargo, se puede explicar a los alumnos que las líneas que unen cada nota no tienen por qué ser rectas. Se decidirá la forma según la melodía sea más o menos suave y es por esto que se ha definido esta cualidad como subjetiva.\\
+En el caso anterior (Figura \ref{funcion}) se ve claramente en el dibujo que la función tiene un pico y, por tanto, no es derivable en todo su dominio. Sin embargo, en el caso de la melodía inicial de la obra \textit{Obertura de 1812} de \textit{Thaikovsky} se tiene una melodía muy suave, sin cambios bruscos de tono y, por tanto, un posible esbozo de la función sería:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{Images/Capítulo 6/obertura2.png}
+    \caption{Esbozo de la función que representa el fragmento de <<Obertura 1812>>.}
+\end{figure}
+Y por tanto, si no se tienen en cuenta los silencios iniciales:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{Images/Capítulo 6/obertura3.png}
+    \caption{Función del fragmento de la <<Obertura 1812>>.}
+\end{figure}
+Esta función es derivable en todo su dominio. \\\\
 \textbf{Desarrollo de la actividad.}\\\\
 Se realizará en una única clase y, tal y como se ha mencionado, al finalizar el bloque de Análisis.\\\\
 En primer lugar, el profesor explicará cómo las melodías pueden ser vistas como funciones mediante un ejemplo. Se propone no utilizar una metodología expositiva, sino que los alumnos participen aportando ideas de cuáles pueden ser los elementos de esa función, creando de esta forma una clase más dinámica.\\\\
-Una vez se haya explicado el ejemplo, los alumnos trabajarán en grupos de cuatro o cinco personas. El profesor elegirá una canción distinta para cada grupo. Deberán ser canciones conocidas por todos para que puedan dibujar la melodía sin necesidad de ver una partitura. Algunos ejemplos pueden ser: ''Cumpleaños Feliz'', ''Noche de Paz'', ''La Cucaracha'', ''Resistiré''. También, cada grupo puede elegir una canción por ellos conocida.\\\\
+Una vez se haya explicado el ejemplo, los alumnos trabajarán en grupos de cuatro o cinco personas. El profesor elegirá una canción distinta para cada grupo. Deberán ser canciones conocidas por todos para que puedan dibujar la melodía sin necesidad de ver una partitura. Algunos ejemplos pueden ser: ``Cumpleaños Feliz'', ``Noche de Paz'', ``La Cucaracha'', ``Resistiré''. También, cada grupo puede elegir una canción por ellos conocida.\\\\
 Los alumnos deberán trabajar en equipo para esbozar una posible función que represente esa melodía y hallar los distintos elementos descritos anteriormente. 
-\section{Bloque 5: Probabilidad y Estadística..}
-Con la idea de introducir a los alumnos en el mundo de la probabilidad, se propone el ''juego de los dados de Mozar'' como recurso didáctico para la enseñanza-aprendizaje de este campo.\\\\
+\section{Bloque 5: Probabilidad y Estadística.}
+Con la idea de introducir a los alumnos en el mundo de la probabilidad, se propone el ``juego de los dados de Mozart'' como recurso didáctico para la enseñanza-aprendizaje de este campo.\\\\
 Mozart, mediante el proceso que se va a explicar a continuación, escribió su obra \textit{Musikalisches Würfelspiel}. Se trata de un vals dividido en dos partes: un minueto y un trío, cada uno de ellos de 8 compases. Sin embargo, gracias al sistema que utilizó Mozart para componer esta obra, se pueden escribir una gran cantidad de valses distintos. Por lo tanto, se puede decir que Mozart no solo compuso una obra si no que, gracias a la probabilidad y el azar, creó un generador de valses.\\\\
 El juego de dados se basa en dos tablas: una para los minuetos y otra para los tríos. En ambas, las columnas indican el número de orden del compás y en cada una
 de las filas aparece un número entre 2 y 12 que corresponde a los números que se pueden obtener al lanzar dos dados.
@@ -1110,7 +1166,7 @@ En el interior de las tablas se encuentra un repertorio de compases cifrados.
          \hline
     \end{tabular}
     %}
-    \caption{Tabla del "Juego de dados de Mozart". Minueto.}
+    \caption{Tabla del ``Juego de dados de Mozart''. Minueto.}
 \end{table}
 \begin{table}[H]
     \centering
@@ -1145,33 +1201,8 @@ En el interior de las tablas se encuentra un repertorio de compases cifrados.
          \hline
     \end{tabular}
     %}
-    \caption{Tabla del "Juego de dados de Mozart". Trío.}
+    \caption{Tabla del ``Juego de dados de Mozart''. Trío.}
 \end{table}
-% \begin{table}[H]
-%     \centering
-%     \resizebox{15cm}{!}{
-%     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-%     \hline
-%     \multicolumn{17}{|c|}{Minueto}\\
-%     \hline \hline 
-%          & \textbf{I} & \textbf{II} & \textbf{III} & \textbf{IV} & \textbf{V} & \textbf{VI} & \textbf{VII} & \textbf{VIII} & \textbf{IX} & \textbf{X} & \textbf{XI} & \textbf{XII} & \textbf{XIII} & \textbf{XIV} & \textbf{XV} & \textbf{XVI}\\
-%          \hline
-%          \textbf{1} & 72 & 6 & 59 & 25 & 81 & 41 & 89 & 13 & 36 & 5 & 46 & 79 & 30 & 95 & 19 & 66\\
-%          \hline
-%          \textbf{2} & 56 & 82 & 42 & 74 & 14 & 7 & 26 & 71 & 76 & 20 & 64 & 84 & 8 & 35 & 47 & 88\\
-%          \hline
-%          \textbf{3} & 75 & 39 & 54 & 1 & 65 & 43 & 15 & 80 & 9 & 34 & 93 & 48 & 69 & 58 & 90 & 21\\
-%          \hline
-%          \textbf{4} & 40 & 73 & 16 & 68 & 29 & 55 & 2 & 61 & 22 & 67 & 49 & 77 & 57 & 87 & 33 & 10\\
-%          \hline
-%          \textbf{5} & 83 & 3 & 28 & 53 & 37 & 17 & 44 & 70 & 63 & 85 & 32 & 96 & 12 & 23 & 50 & 91\\
-%          \hline
-%          \textbf{6} & 18 & 45 & 62 & 38 & 4 & 27 & 52 & 94 & 11 & 92 & 24 & 86 & 51 & 60 & 78 & 31\\
-%          \hline
-%     \end{tabular}
-%     }
-%     \caption{Tabla del "Juego de los dados de Mozart". Trío.}
-% \end{table}
 
 El método funciona porque Mozart creó las tablas con dos peculiaridades:
 \begin{enumerate}
@@ -1181,14 +1212,12 @@ El método funciona porque Mozart creó las tablas con dos peculiaridades:
 \textbf{Desarrollo de la actividad.}\\\\
 Se realizará en una única clase y una vez que los alumnos tengan los conceptos básicos de probabilidad asimilados. Se busca que sea una clase dinámica, donde los alumnos intervengan con un aprendizaje significativo ya adquirido con el fin de que sean ellos los protagonistas en el aula.\\\\
 Como observación, esta actividad también podría utilizarse al inicio del bloque como motivación para introducir a los alumnos este tema de una forma original. Pero en este caso, tanto la metodología a utilizar como el propio desarrollo de la clase serán diferentes de lo que a continuación se va a exponer.\\\\
-En primer lugar, se hablará a los alumnos de Mozart. Se puede iniciar la clase, por ejemplo, preguntando: "¿Quién puede contarnos algo sobre Mozart?". Se debe aportar una breve biografía para poner en contexto a los alumnos y así también enriquecer su cultura musical.\\
-Se les contará, tal y como se ha explicado al inicio de esta sección, el proceso que siguió Mozart para utilizar el “generador de valses” en la creación de su obra y se les entregará una ficha con las tablas antes descritas y los compases que ideó el gran compositor. (Apéndice E).\\\\
+En primer lugar, se hablará a los alumnos de Mozart. Se puede iniciar la clase, por ejemplo, preguntando: ``¿Quién puede contarnos algo sobre Mozart?''. Se debe aportar una breve biografía para poner en contexto a los alumnos y así también enriquecer su cultura musical.\\
+Se les contará, tal y como se ha explicado al inicio de esta sección, el proceso que siguió Mozart para utilizar el “generador de valses” en la creación de su obra y se les entregará una ficha con las tablas antes descritas y los compases que ideó el gran compositor. (Apéndice D).\\\\
 La metodología que se propone en este caso es, durante toda la clase, hacer preguntas para que sean los alumnos quienes respondan en todo momento. Si tienen nociones básicas de probabilidad, no tendrán ninguna dificultad:
 \begin{itemize}
     \item ¿Al lanzar dos dados, se tiene la misma probabilidad de obtener como suma un 3 que un 6?\\
-    No. De hecho es muy fácil calcular la probabilidad de obtener cada número:
     \item Al lanzar un único dado es obvio que todos los números tienen la misma probabilidad. ¿Qué distribución sigue este experimento? ¿Y al lanzar dos dados, que distribución se tiene?
-    Uniforme...
     \item ¿Cuántos valses se pueden crear con este método?
     
 \end{itemize}
@@ -1196,7 +1225,7 @@ Por último, se puede animar a los alumnos a utilizar este procedimiento para co
 Durante el proceso de esta actividad grupal, el profesor puede explicar por qué el método funciona tan bien.  
 
 \section{Análisis de las actividades.}
-Dado que no ha sido posible poner en práctica estas actividades durante un curso escolar, no se pueden ofrecer resultados cuantitativos obtenidos en la observación del trabajo de los alumnos. Sin embargo, se ha pedido a dos profesionales su opinión con respecto a la relación entre las matemáticas y la música y, en concreto, a enseñar dicha relación en el aula. A cada uno de ellos se le preguntaron cuestiones relacionadas con su profesión. Las entrevistas completas se encuentran en el apéndice D.\\\\
+Dado que no ha sido posible poner en práctica estas actividades durante un curso escolar, no se pueden ofrecer resultados cuantitativos obtenidos en la observación del trabajo de los alumnos. Sin embargo, se ha pedido a dos profesionales su opinión con respecto a la relación entre las matemáticas y la música y, en concreto, a enseñar dicha relación en el aula. A cada uno de ellos se le preguntaron cuestiones relacionadas con su profesión. Las entrevistas completas se encuentran en el apéndice C.\\\\
 El primer profesor, Gabriel Gomila, es musicólogo y pedagogo. Se le preguntó, en relación con este último capítulo, sobre qué le parecía utilizar estas actividades para explicar algunos conceptos básicos de la teoría musical. En toda la entrevista se puede observar la importancia que le da al nexo tan significativo que existe entre las matemáticas y la música y el gran paso que supondría realizar actividades interdisciplinares entre estas dos áreas. Además, aporta algunas ideas muy interesantes que podrían ser utilizadas en el aula de matemáticas.\\
 Por otra parte y como músico, destaca la importancia que tiene este campo en muchos otros ámbitos y aclara que la explicación matemática que hay debajo de la música debería ser utilizada más a menudo para desarrollar nuevos campos científicos como, por ejemplo, la medicina. Se ha querido destacar esto ya que este trabajo puede ser un punto de partida para demostrar a los alumnos la importancia que tiene la aplicación de las matemáticas en muy diversos campos, algunos de ellos que ni siquiera podrían llegar a imaginar y que, sin embargo, pueden llegar a ser muy importantes.\\\\
 El segundo profesional, Eduardo Madirolas, ha sido profesor de matemáticas durante muchos años en el Centro Integrado de Música de San Lorenzo de El Escorial, por lo que ha impartido esta asignatura a alumnos que en el futuro serían músicos. En la entrevista enumera diversas ocasiones en las que él mismo ha utilizado la música en el aula. De hecho, una de las actividades que explica ha sido detallada en este trabajo: el uso de los movimientos geométricos en la transposición y transformación musical.\\
@@ -1207,7 +1236,7 @@ Para finalizar este capítulo, se quiere destacar una frase de la entrevista: \t
 
 \chapter{Conclusiones y líneas de trabajo futuras.}
 Las matemáticas en el bachillerato juegan un doble papel: tienen un fuerte carácter formativo pero también, y esto tal vez sea aun más importante, se conforman como una materia básica e instrumental necesaria para el desarrollo de los procedimientos propios de otros campos del saber muy diversos; incluso, y aunque en un principio pueda parecer extraño, la música.\\\\
-Es muy conveniente que esta ciencia básica sea aprendida experimentando y resolviendo actividades motivadoras que liguen los modelos puramente matemáticos con la creación de técnicas y procedimientos que ayuden a desarrollar, entre otras, situaciones relacionadas con el arte y con la música. Se puede afirmar, sin ningún temor a equivocación, que las matemáticas tienen la capacidad de fomentar la creatividad de los alumnos y pueden ayudar a estimular el interés por la belleza de la música. Y esto último es lo que se ha intentado demostrar y evidenciar, desde luego en una pequeña escala, con la elaboración de este trabajo fin de máster.\\\\
+Es muy conveniente que esta ciencia básica sea aprendida experimentando y resolviendo actividades motivadoras que liguen los modelos puramente matemáticos con la creación de técnicas y procedimientos que ayuden a desarrollar, entre otras, situaciones relacionadas con el arte y con la música. Se puede afirmar, sin ningún temor a equivocación, que las matemáticas tienen la capacidad de fomentar la creatividad de los alumnos y pueden ayudar a estimular el interés por la belleza de la música. Y esto último es lo que se ha intentado demostrar y evidenciar, desde luego en una pequeña escala, con la elaboración de este Trabajo Fin de Máster.\\\\
 Se ha intentado exponer una serie de ejemplos concretos con los que intentar demostrar que algunos de los conceptos y procedimiento propios del arte musical se pueden desarrollar utilizando modelos y procedimientos matemáticos básicos:
 \begin{itemize}
     \item El álgebra y la teoría de sucesiones y funciones en general pueden ayudar a establecer de forma adecuada la medida de las notas musicales.
@@ -1217,7 +1246,7 @@ Se ha intentado exponer una serie de ejemplos concretos con los que intentar dem
 Por otra parte, no se debe olvidar la importancia de la presentación del carácter lúdico de las matemáticas, tan importante a la hora de motivar a los alumnos en el estudio de esta ciencia. Este carácter puede ser abordado, tal y como se expone en este trabajo, mediante la propuesta de diferentes actividades que pueden estar relacionadas directamente con los procesos de deducción y que pueden ser abordadas con la propuesta de situaciones en la que, de alguna manera, aparezca la música. Estas actividades están íntimamente relacionadas con la resolución de problemas y es evidente su eficacia para desarrollar las capacidades de comunicación y relación social y la valoración del trabajo en equipo.\\\\
 Por todo ello, la música puede ser una excusa válida para dejar patente ante los alumnos la importancia de las matemáticas y su capacidad para resolver situaciones de la vida cotidiana, de la ciencia y el arte y, en todo caso, cercanas a sus intereses. Para conseguir este objetivo, el presente trabajo propone la resolución de un conjunto de actividades, siempre relacionadas con la música, que motiven en los alumnos el interés por el estudio de las matemáticas y, de paso, les lleve a adquirir ciertas competencias que les puedan ser necesarias en su futuro trabajo e, incluso, en el desarrollo de su vida artística.
 \section{Líneas de trabajo futuras}
-Sin ninguna duda, hay muchísimas formas en las que se podría ampliar este trabajo, desde la parte matemática aplicada a la teoría musical, hasta las distintas actividades que se podrían realizar en este campo. Tal y como se ha mencionado en párrafos anteriores, este trabajo solo cubre una pequeña parte de la presencia de las matemáticas en la música..\\\\
+Sin ninguna duda, hay muchísimas formas en las que se podría ampliar este trabajo, desde la parte matemática aplicada a la teoría musical, hasta las distintas actividades que se podrían realizar en este campo. Tal y como se ha mencionado en párrafos anteriores, este trabajo solo cubre una pequeña parte de la presencia de las matemáticas en la música.\\\\
 En cuanto a la parte teórica, algunos de los aspectos que se podrían tratar en un futuro trabajo son: 
 \begin{itemize}
     \item Geometría de las escalas modales. Así como se explica en \cite{futuras1} (Araujo, A. (2018)), también se puede comprobar la simetría que generan estas escalas al conectar las notas que las componen en una circunferencia.
@@ -1232,7 +1261,7 @@ En cuanto a la parte teórica, algunos de los aspectos que se podrían tratar en
 \end{itemize}
 En cuanto a las posibles actividades para el aula:
 \begin{itemize}
-    \item Tal y como menciona Gabriel Gomila en la entrevista del Apéndice D, \textit{se podría explicar en directo como se generan los intervalos en un monocordio, obteniendo una clase visual.}
+    \item Tal y como menciona Gabriel Gomila en la entrevista del Apéndice C, \textit{se podría explicar en directo como se generan los intervalos en un monocordio, obteniendo una clase visual.}
     \item Sabiendo que el sistema de afinación actual se basa en que la proporción de un semitono es $\sqrt[12]{2}$ (Capítulo 3), se pueden realizar actividades para trabajar con radicales aprendiendo, de esta forma, la distribución de las escalas actual y las frecuencias que tiene cada nota. Un ejemplo sería el problema propuesto en el libro \cite{papa}.\\
     \begin{ejem}
     La escala cromática del piano está formada por las doce notas (doce semitonos) que aparecen en las teclas del piano.\\
@@ -1347,32 +1376,32 @@ A continuación, se relacionan los conceptos básicos que han sido necesarios pa
         \caption{Nombres de las notas en la escala de Do Mayor.}
     \end{figure}
 \end{itemize}
-\chapter{Currículo Matemáticas I. 1º de Bachillerato}
- \begin{figure}[H]
-     \centering
-     \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo1a.png}
-     \caption{Currículo Matemáticas I. Bloque 1.}
- \end{figure}
-  \begin{figure}[H]
-     \centering
-     \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo1b.png}
-     \caption{Currículo Matemáticas I. Bloque 1.}
- \end{figure}
-  \begin{figure}[H]
-     \centering
-     \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo2.png}
-     \caption{Currículo Matemáticas I. Bloque 2.}
- \end{figure}
-  \begin{figure}[H]
-     \centering
-     \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo3.png}
-     \caption{Currículo Matemáticas I. Bloques 3 y 4.}
- \end{figure}
-  \begin{figure}[H]
-     \centering
-     \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo4.png}
-     \caption{Currículo Matemáticas I. Bloque 5.}
- \end{figure}
+% \chapter{Currículo Matemáticas I. 1º de Bachillerato}
+%  \begin{figure}[H]
+%      \centering
+%      \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo1a.png}
+%      \caption{Currículo Matemáticas I. Bloque 1.}
+%  \end{figure}
+%   \begin{figure}[H]
+%      \centering
+%      \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo1b.png}
+%      \caption{Currículo Matemáticas I. Bloque 1.}
+%  \end{figure}
+%   \begin{figure}[H]
+%      \centering
+%      \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo2.png}
+%      \caption{Currículo Matemáticas I. Bloque 2.}
+%  \end{figure}
+%   \begin{figure}[H]
+%      \centering
+%      \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo3.png}
+%      \caption{Currículo Matemáticas I. Bloques 3 y 4.}
+%  \end{figure}
+%   \begin{figure}[H]
+%      \centering
+%      \includegraphics[width = 1.1\textwidth]{Images/Apéndices/Apéndice B/curriculo4.png}
+%      \caption{Currículo Matemáticas I. Bloque 5.}
+%  \end{figure}
 \chapter{Partitura "Dueto del Espejo".}
 \begin{figure}[H]
     \centering
@@ -1474,5 +1503,7 @@ A continuación, se relacionan los conceptos básicos que han sido necesarios pa
 \bibitem{futuras2}{\textsc{Peterson, I.}(2008): \textit{A fractal in Bach's Cello Suite.} The Mathematical Tourist. \url{http://mathtourist.blogspot.com/} Acceso 9 de abril de 2020.}
 \bibitem{futuras3}{\textsc{Arias, S.}(2011): \textit{Matemática de la Música: Armonía Musical}. Blog de música. \url{http://matematicadelamusica-armoniamusical.blogspot.com/2011/12/sucesiones-de-fibonacci-y-en-la-musica.html} Acceso 9 de abril de 2020.}
 \bibitem{papa}{\textsc{Alcaide, F.}\textit{}}
+\bibitem{weier}{\textsc{wikipedia.org}. \textit{Función de Weierstrass.} \url{https://es.wikipedia.org/wiki/Funci\%C3\%B3n_de_Weierstrass} Acceso 22 de abril de 2020.}
+\bibitem{boe}{\textsc{Boletín Oficial del Estado}. \textit{Real Decreto 1105/2014, de 26 de diciembre, por el que se establece el currículo básico de la Educación Secundaria Obligatoria y del Bachillerato.} Sección I, página 169.}
 \end{thebibliography}
 \end{document}
